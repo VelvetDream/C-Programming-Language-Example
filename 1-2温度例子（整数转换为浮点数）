@@ -1,18 +1,22 @@
 #include <stdio.h>
 /* 当fahr = 0,20,…,300时，分别打印华氏温度与摄氏恩度对照表*/
  
-main()
+main() /*定义名为main 函数，它部接受参数值*/ 
 {
-	float fahr, celsius;
+	float fahr, celsius;/*定义华氏度、摄氏度为浮点数类型*/ 
 	int lower, upper, step;
 	lower = 0; /*  温度表的下限 */
 	upper = 300; /* 温度表的上限 */
-	step = 20; /* 步长 */
-	
-	fahr = lower;
+	step = 20; /* 步长跨度是20 */
+
+	fahr = lower;/*从温度表的下线可以转换*/ 
 	while (fahr <= upper) {
+		/*将华氏度转换为摄氏度*/
 		celsius = (5.0/9.0) * (fahr - 32.0);
+		/*华氏度显示至少3个字符宽，并省略小数部分
+		摄氏度显示至少6个字符宽，取一位小数*/ 
 		printf("%3.0f %6.1f\n", fahr, celsius);
+		/*华氏度跨度是每20度显示一次*/ 
 		fahr = fahr + step;
 
 	}
