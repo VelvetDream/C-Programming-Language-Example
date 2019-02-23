@@ -1,0 +1,35 @@
+/*
+文件复制
+读一个字符
+while（该字符不是文件结束指示符）
+	输出杠读入的字符
+	读下一个字符 
+*/ 
+#include <stdio.h>
+/*将输入复制到输出：版本1*/
+
+main()
+{
+	/*c等于获取到的char
+	当C不等于EOF时开始循环
+	putchar = c,输入的等于c 
+	c等于获取到的
+	*/ 
+	int c;
+	c = getchar();
+	while(c !=EOF)
+	{
+		putchar(c);	
+		c = getchar();	
+	}
+ 
+ } 
+  /*/*将输入复制到输出：版本2*/
+
+ main()
+ {
+ 	int c;
+ 	/*当获取到的c不等于EOF时，打印出C*/ 
+ 	while ((c = getchar()) != EOF)
+ 		putchar(c);
+  } 
