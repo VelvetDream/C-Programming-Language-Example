@@ -3,16 +3,25 @@
  
 main()
 {
+	/* 定义华氏温度、摄氏温度为整数*/ 
 	int fahr, celsius;
+	/* 定义最低温度、最高温度、步长为整数*/ 
 	int lower, upper, step;
 	lower = 0; /*  温度表的下限 */
 	upper = 300; /* 温度表的上限 */
 	step = 20; /* 步长 */
-	
+	 
 	fahr = lower;
+	/* 当华氏度小于等于最高温度时*/ 
 	while (fahr <= upper) {
+		/* 摄氏度转化为华氏度）*/ 
 		celsius = 5 * (fahr - 32) / 9;
-		printf("%d\ %d\n", fahr, celsius);
+		/* 按格式打印出摄氏度对应华氏度温度表
+		%d 指第一个参数占3个数字宽
+		%6d 指第二个参数占6个数字宽
+		\n 代表换行*/ 
+		printf("%d\ %6d\n", fahr, celsius);
+		/*华氏度等于华氏度+20度*/ 
 		fahr = fahr + step;
 
 	}
