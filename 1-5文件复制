@@ -30,6 +30,6 @@ main()
  {
  	int c;
  	/*当获取到的c不等于EOF时，打印出C*/ 
- 	while ((c = getchar()) != EOF)
+ 	while (c = getchar() != EOF)
  		putchar(c);
   } 
